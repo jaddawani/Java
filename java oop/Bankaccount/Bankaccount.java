@@ -6,8 +6,10 @@ private
 long accountnumber;
 long rand(){
     Random r = new Random();
-    accountnumber= r.nextInt(100000000-0);
+    accountnumber= r.nextInt(999999999) + 1000000000;
+     System.out.println(accountnumber);
 return accountnumber;
+
 }
 double balance;
 double savingbalacne = 0;
@@ -46,7 +48,11 @@ void setsavingbalance(int amount){
 
 void withdrawl(int amount){
 
+    if (amount < this.balance){
     this.balance-=amount;
+    System.out.println(balance);
+
+    }
 }
 
 void savingwithdrawl(int amount){
